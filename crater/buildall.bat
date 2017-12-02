@@ -1,0 +1,2 @@
+call "C:\Program Files\Mono\bin\mcs" /reference:System.Web.Extensions.dll /reference:System.ServiceProcess.dll CraterMain.cs PipeIO.cs WinApi.cs -sdk:2 -out:CraterMainWin7.exe
+call "C:\Program Files\Mono\bin\mcs" /reference:System.Web.Extensions.dll /reference:System.ServiceProcess.dll CraterMain.cs PipeIO.cs WinApi.cs -out:CraterMainWin8+.exe
