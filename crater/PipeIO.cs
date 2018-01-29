@@ -63,7 +63,7 @@ namespace CalderaIO
         {
             
             Debug.WriteLine("Outgoing Message:" + line);
-            String b64Line = Convert.ToBase64String(Encoding.Default.GetBytes(line));
+            String b64Line = Convert.ToBase64String(Encoding.UTF8.GetBytes(line));
             pipeWriter.WriteLine(b64Line);
         }
 
@@ -100,7 +100,7 @@ namespace CalderaIO
             }
             b64Line = b64Line.Trim();
             Debug.WriteLine("Incoming Message b64:" + b64Line);
-            string nextLine = Encoding.Default.GetString(Convert.FromBase64String(b64Line));
+            string nextLine = Encoding.UTF8.GetString(Convert.FromBase64String(b64Line));
             Debug.WriteLine("Incoming Message:" + nextLine);
             return nextLine;
         }

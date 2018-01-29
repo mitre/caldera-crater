@@ -565,7 +565,7 @@ namespace crater
 
             IntPtr _LoadLibrary = GetProcAddress(GetModuleHandleW("kernel32"), "LoadLibraryW");
             IntPtr numBytes;
-            if (! WriteProcessMemory(processHandle, lpBaseAddress, System.Text.Encoding.Unicode.GetBytes(dllName), new IntPtr(dllName.Length * 2), out numBytes))
+            if (! WriteProcessMemory(processHandle, lpBaseAddress, Encoding.Unicode.GetBytes(dllName), new IntPtr(dllName.Length * 2), out numBytes))
             {
 
                 Debug.WriteLine(String.Format("WriteProcessMemory failed with error {0}", Marshal.GetLastWin32Error()));
